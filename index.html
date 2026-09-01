@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morphogen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <canvas id="canvas"></canvas>
+    <div id="controls">
+      <label>Speed <span id="speedVal">5</span>
+        <input type="range" id="speedSlider" min="1" max="15" step="1" value="5">
+      </label>
+      <label>Feed <span id="feedVal">0.055</span>
+        <input type="range" id="feedSlider" min="0.01" max="0.1" step="0.001" value="0.055">
+      </label>
+      <label>Kill <span id="killVal">0.062</span>
+        <input type="range" id="killSlider" min="0.04" max="0.08" step="0.001" value="0.062">
+      </label>
+      <button id="resetBtn">Reset</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+    <div id="presets">
+  <button onclick="setPreset(0.055, 0.062, 0.4, 0.3, 5)">Coral</button>
+  <button onclick="setPreset(0.033, 0.063, 0.4, 0.3, 3)">Cheetah</button>
+  <button onclick="setPreset(0.028, 0.053, 0.45, 0.25, 4)">Mitosis</button>
+  <button onclick="setPreset(0.026, 0.051, 0.25, 0.3, 5)">Fingerprint</button>
+  <button onclick="setPreset(0.018, 0.051, 0.2, 0.15, 3)">Dendrites</button>
+</div>
+  </div>
+  <script src="sketch.js"></script>
+</body>
+</html>
